@@ -3,8 +3,8 @@
 1. **Clone this repository and navigate into the folder:**
 
    ```bash
-   git clone repository.address.com
-   cd repository-name
+   git clone https://github.com/JonipHarju/exercise-template.git
+   cd exercise-template
    ```
 
 2. **Install dependencies:**
