@@ -2,12 +2,6 @@ export function multiply(a, b) {
   return a * b;
 }
 
-/**
- * Get the youngest user from the given array of users.
- * @param users - An array of User objects.
- * @returns The youngest user or null if the array is empty.
- */
-
 interface User {
   id: number;
   first_name: string;
@@ -17,7 +11,9 @@ interface User {
   date_of_birth: string;
 }
 
+// get the youngest user from the users array
 export function getYoungestUser(users: User[]): User | void {
+  // your code here
   let youngestUser: User | null = null;
 
   for (let user of users) {
@@ -28,11 +24,12 @@ export function getYoungestUser(users: User[]): User | void {
       youngestUser = user;
     }
   }
-  console.log(youngestUser);
   return youngestUser;
 }
-
+// get the oldest user from the users array
 export function getOldestUser(users: User[]): User | void {
+  // your code here
+
   let oldestUser: User | null = null;
 
   for (let user of users) {
@@ -43,6 +40,5 @@ export function getOldestUser(users: User[]): User | void {
       oldestUser = user;
     }
   }
-  console.log(oldestUser);
   return oldestUser;
 }

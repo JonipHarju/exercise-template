@@ -1,6 +1,5 @@
 import { describe, expect, test } from "@jest/globals";
 import * as fs from "fs";
-import { it } from "node:test";
 
 const mockDataPath = "./MOCK_DATA.json";
 const mockData: User[] = JSON.parse(fs.readFileSync(mockDataPath, "utf-8"));
@@ -15,7 +14,6 @@ interface User {
 }
 
 import { multiply } from "./exercises";
-
 describe("multiply the two numbers", () => {
   test("adds 1 + 2 to equal 3", () => {
     expect(multiply(1, 2)).toBe(2);
