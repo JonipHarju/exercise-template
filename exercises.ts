@@ -42,3 +42,11 @@ export function getOldestUser(users: User[]): User | void {
   }
   return oldestUser;
 }
+
+// get the users who's name starts with J. If no users found return an empty array
+export function getNamesStartingWithJ(users: User[]): User[] {
+  // your code here
+  const filteredUsers = users.filter((user) => user.first_name.startsWith("J"));
+
+  return filteredUsers;
+}

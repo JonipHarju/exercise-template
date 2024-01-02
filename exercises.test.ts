@@ -48,3 +48,27 @@ describe("getOldestUser", () => {
     });
   });
 });
+
+import { getNamesStartingWithJ } from "./exercises";
+
+describe("getNamesStartingWithJ", () => {
+  test("should return users whose first names start with 'J'", () => {
+    const result = getNamesStartingWithJ(mockData);
+
+    // Check if the result contains only users with names starting with 'J'
+    expect(result.every((user) => user.first_name.startsWith("J"))).toBe(true);
+  });
+
+  test("should return an empty array if no users have names starting with 'J'", () => {
+    // Create mock data with no users whose names start with 'J'
+    const mockDataWithoutJ = mockData.map((user) => ({
+      ...user,
+      first_name: "NotJ",
+    }));
+
+    const result = getNamesStartingWithJ(mockDataWithoutJ);
+
+    // Check if the result is an empty array
+    expect(result).toEqual([]);
+  });
+});
